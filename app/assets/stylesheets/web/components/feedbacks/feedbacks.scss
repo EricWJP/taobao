@@ -1,0 +1,47 @@
+#feedbacks-container{
+  margin: 10px auto 50px auto;
+  min-width: 900px;
+  max-width: 1200px;
+  overflow: hidden;
+  min-height: calc(100vh - 560px);
+  box-sizing: border-box;
+  .feedbacks-form{
+    background-color: #fff;
+    padding: 35px;
+    margin-right: 10px;
+  }
+  h2.title{
+    font-size: 16px;
+    border-left: 2px solid #00a0ff;
+    margin:0 0 50px 0;
+    font-weight: 600;
+    padding-left: 10px;
+  }
+  .qq-group{
+    background-color: #fff;
+    padding: 35px 20px;
+    .qq-item{
+      margin: 10px 0;
+      color: #374052;
+      span{
+        margin-left: 10px;
+      }
+      &.full{
+        i{
+          color: #576072;
+        }
+        span{
+          color: #fe716e;
+        }
+      }
+      &.empty{
+        i{
+          color: #b2b2b2;
+        }
+        span{
+          color: #00a0ff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+$high_color: #00a0ff;
+
+/* style for buttons */
+
+// .follow-btn{
+//    line-height: 28px;
+//    padding: 0 15px;
+//    background: $high_color;
+//    color: #fff;
+//    display: inline-block;
+//    border-radius: 40px;
+//    font-size: 12px;
+// }
+// .follow-btn-empty{
+//   line-height: 28px;
+//   padding: 0 15px;
+//   border:1px solid $high_color;
+//   color: $high_color;
+//   display: inline-block;
+//   border-radius: 40px;
+//   font-size: 12px;
+// }
+
+
+.submit-btn{
+  padding: 0 40px;
+  line-height: 34px;
+  color: #fff;
+  background: $high_color;
+  border-radius: 5px;
+  border: none;
+}
+
+.loading-more{
+  display: block;
+  margin: 20px auto;
+  padding: 0px 30px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #343b42;
+  text-align: center;
+  &:hover{
+    color: $high_color;
+  }
+  &.disabled{
+    color: #eaedf5;
+    cursor:not-allowed;
+    &:hover{
+      color: #eaedf5;
+    }
+  }
+}

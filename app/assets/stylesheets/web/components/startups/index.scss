@@ -1,0 +1,81 @@
+@import 'web/share/meta';
+
+.startups-list-container{
+  overflow: hidden;
+  padding-top: 20px;
+  .startups-playlists{
+    padding: 0;
+    .startups-playlists-table{
+      margin-top: 0;
+    }
+  }
+}
+// 侧边栏项目列表
+.startups-list-group,.similar-startups, .industries-list-group{
+  margin-top: 20px;
+  li{
+    border-bottom: 1px solid #f6f6f6;
+    padding: 10px 0;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover{
+      background: #f9fafc;
+    }
+    img{
+      float: left;
+      width: 55px;
+      height: 55px;
+      border: 1px solid #eaedf5;
+    }
+    .profile{
+      margin-left: 65px;
+      .name{
+        font-size: 16px;
+        color: #333333;
+        margin-bottom: 5px;
+        a{
+          display: inline-block;
+          overflow: hidden;
+          width: 180px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      .number{
+        font-size: 14px;
+        color: #ff6000;
+      }
+    }
+    &:last-child{
+      border: none;
+    }
+  }
+}
+// 热门创业公司
+.hot-startups-lists, .recent-invest-startups{
+  @include block-container;
+  margin-top: 20px;
+  .select2{
+    float: right;
+    top: -3px;
+  }
+}
+// 申请收录项目
+.reply-collection{
+  @include block-container;
+  font-size: 14px;
+  .reply-btn{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #00a0ff;
+    border: 1px solid #00a0ff;
+    cursor: pointer;
+  }
+  .info{
+    padding: 20px;
+    color: #333333;
+    text-align: center;
+  }
+}

@@ -1,0 +1,16 @@
+css
+  .event-banner{
+    margin: 60px 0;
+    height: 250px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    }
+.events-list-show
+  - if @coupons.present?
+    - @coupons.each do |coupon|
+      = render "coupons/coupon", coupon: coupon
+  - else
+    = render 'coupons/empty'
+.page_list
+  = will_paginate(@coupons)

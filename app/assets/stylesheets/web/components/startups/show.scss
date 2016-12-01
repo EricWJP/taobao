@@ -1,0 +1,472 @@
+@import 'web/share/meta';
+// starupbizcard
+.startups-bizcard{
+  padding-bottom: 50px;
+  background: url("/images/web/investments/me_banner.jpg") center top no-repeat;
+  background-size: cover;
+  .share_to_code{
+    top: 48px;
+    right: 0;
+    bottom: auto;
+    color: #fff;
+  }
+  .main-startups{
+    position: relative;
+    min-width: 900px !important;
+    max-width: 1200px;
+    .startups-info{
+      padding-top: 48px;
+      overflow: hidden;
+      .avatar{
+        width: 120px;
+        height: 120px;
+        float: left;
+        line-height: 120px;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 15px;
+
+        img{
+          max-height: 100%;
+          max-width: 100%;
+          vertical-align: middle;
+
+        }
+      }
+      .base_info{
+        margin-left: 150px;
+        i{
+          margin-right: 5px;
+        }
+        .name{
+          font-size: 30px;
+          font-weight: 600;
+          color: #fff;
+        }
+        .pitch{
+          font-size: 14px;
+          margin-bottom: 20px;
+          color: rgba(255,255,255,.9);
+          width: 800px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .other_info{
+          font-size: 0.9em;
+          line-height: 1.8em;
+          color: rgba(255,255,255,.6);
+          b{
+            display: inline-block;
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+  .follow-btn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 110px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+.drop-btn{
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #eaedf5;
+  color: #343b42;
+  position: relative;
+  cursor: pointer;
+  &:hover{
+    border: 1px solid $high_color;
+    color: $high_color;
+  }
+}
+#investments-container{
+  .section-introduce{
+    @include block-container;
+    .show-content{
+      font-size: 13px;
+      color: #374052;
+      line-height: 2;
+      letter-spacing: 2px;
+      text-align: left;
+    }
+    // i.drop-down-icon{
+    //   position: absolute;
+    //   top: 12px;
+    //   margin-left: 10px;
+    //   display: inline-block;
+    //   width: 10px;
+    //   height: 10px;
+    //   border-left: 1px solid #343b42;
+    //   border-bottom: 1px solid #343b42;
+    //   transform: rotate(-45deg);
+    //   -webkit-transform: rotate(-45deg);
+    // }
+  }
+  .section-compete{
+    @include block-container;
+    margin-top: 20px;
+  }
+  .section-team{
+    @include block-container;
+    margin-top: 20px;
+    .members-list{
+      margin-top: 30px;
+    }
+    .member-item{
+      padding: 25px 0;
+      overflow: hidden;
+      border-bottom: 1px solid #f5f8fd;
+      .avatar{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        float: left;
+      }
+      .show-pitch{
+        margin-left: 100px;
+        .name{
+          font-size: 16px;
+          color: #343d42;
+          font-weight: 600;
+        }
+        .title{
+          font-size: 12px;
+          line-height: 1;
+          display: inline-block;
+          padding: 3px 8px;
+          border: 1px solid $high_color;
+          color: $high_color;
+          margin-left: 10px;
+        }
+        .pitch{
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .section-media{
+    @include block-container;
+    margin-top: 20px;
+    // .media-list{
+    //   margin-top: 50px;
+    // }
+    .media-item{
+      margin-top: 20px;
+      .title{
+        font-size: 14px;
+        color: #343b42;
+        &:hover{
+          color: $high_color;
+        }
+      }
+      .info{
+        font-size: 12px;
+        color: #adb1bb;
+        span{
+          margin-left: 10px
+        }
+      }
+    }
+  }
+  .section-icmessage{
+    @include block-container;
+    margin-top: 20px;
+    table{
+      // width: 100%;
+      margin-top: 30px;
+      color: #666;
+      border-collapse:collapse;
+      tr{
+        border: 1px solid #eae3e3;
+      }
+      td{
+        line-height: 1.7em;
+        padding: 12px 15px;
+        border: 1px solid #eae3e3;
+        &.title{
+          background: #f5f7fa;
+        }
+        &:not(.title){
+          min-width: 300px;
+        }
+      }
+    }
+    p{
+      text-align: right;
+      margin-top: 30px;
+      a{
+        font-size: 14px;
+        position: relative;
+        &:before{
+          position: absolute;
+          content: "数据来源，企查查";
+          font-size: 12px;
+          color: #cdcdcd;
+          width: 100px;
+          left: -111px;
+          top: 1px;
+        }
+        &:hover{
+          color: $high_color;
+        }
+      }
+    }
+  }
+  .section-investment{
+    @include block-container;
+    margin-top: 20px;
+    .invest-data{
+      box-sizing: border-box;
+      overflow: hidden;
+      margin: 30px 0;
+      .invest-item{
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        line-height: 1.5;
+      }
+      .invest-count{
+        p{
+          font-size: 22px;
+          color: #ff6000;
+          font-weight: 600;
+        }
+      }
+      .invest-time{
+        p{
+          font-size: 22px;
+          color: #3d464d;
+          font-weight: 600;
+        }
+      }
+    }
+    // 融资历史图表
+    .invest-history-chart{
+      min-height: 230px;
+      position: relative;
+      width: 795px;
+      .chart-filed{
+        position: absolute;
+        // overflow: hidden;
+        .invest-event-item{
+          text-align: center;
+          display: inline-block;
+          font-size: 14px;
+          color: #3d464d;
+          position: relative;
+          transition: all .2s ease-in;
+          &:hover{
+            z-index: 1;
+            transform: scale(1.2);
+          }
+          .time{
+            font-size: 12px;
+            background: #fff;
+            width: 80px;
+            margin: 0 auto;
+          }
+          .circle{
+            width: 80px;
+            height: 80px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            background: #ffa000;
+            margin: auto;
+            display: table;
+            .table-cell{
+              display: table-cell;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+    // 融资历史列表
+    .invest-history-list{
+      li{
+        border-bottom: 1px solid #f4f4f4;
+        padding: 20px;
+        color: #333333;
+        .time{
+          display: inline-block;
+          font-size: 16px;
+          line-height: 60px;
+          float: left;
+          margin-right: 50px;
+        }
+        .profile{
+          display: inline-block;
+          font-size: 14px;
+          .round{
+            margin-right: 40px;
+          }
+          p{
+            color: #ff6000;
+            margin: 20px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+  .section-industry-trend{
+    @include block-container;
+    margin-top: 20px;
+    table{
+      // table-layout: fixed;
+      width: 100%;
+      margin-top: 30px;
+      line-height: 2em;
+      thead{
+        background: #f5f7fa;
+        height: 50px;
+        line-height: 50px;
+        color: #666;
+        font-size: 14px;
+        th{
+          font-weight: inherit;
+          text-align: center;
+        }
+      }
+      tbody{
+        tr{
+          height: 60px;
+          font-size: 13px;
+          color: #333;
+          text-align: center;
+          border-bottom: 1px solid #f6f6f6;
+          &:hover{
+            background: #fbfcff;
+          }
+          a:hover{
+            color: #00a0ff;
+          }
+          .td-title{
+            color: #c0c0c0;
+            text-align: left;
+            width: 7%;
+          }
+          .charts{
+            width: 20%;
+          }
+        }
+      }
+    }
+  }
+  .section-data-present{
+    @include block-container;
+    margin-top: 20px;
+    #data-line-chart{
+      height: 350px;
+    }
+    a:hover{
+      color: #00a0ff;
+    }
+  }
+  .section-startup-activity{
+    @include block-container;
+    margin-top: 20px;
+    .startups-status{
+      margin-top: 20px;
+      .status-item{
+        position: relative;
+        overflow: hidden;
+        height: 90px;
+        &:not(:last-child){
+          &:after{
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 26px;
+            background: #cdcdcd;
+            left: 89px;
+            bottom: 12px;
+          }
+        }
+        .time{
+          width: 70px;
+          height: 40px;
+          line-height: 40px;
+          padding-left: 4px;
+          float: left;
+          color: #bcc1c7;
+          font-size: 12px;
+        }
+        .event{
+          float: left;
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          line-height: 36px;
+          background: #00a0ff;
+          border: 3px solid #99d9ff;
+          border-radius: 50%;
+          color: #ffffff;
+          font-size: 12px;
+          text-align: center;
+          margin-right: 15px;
+        }
+        .detail{
+          line-height: 26px;
+          font-size: 14px;
+          color: #374052;
+          display: block;
+          margin-left: 130px;
+          .table{
+            display: table;
+            margin: 0;
+            height: 40px;
+            .table-cell{
+              display: table-cell;
+              vertical-align: middle;
+              .ellipsis{
+                display: -webkit-box;
+                overflow : hidden;
+                width: 600px;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .section-contact{
+    @include block-container;
+    margin-top: 20px;
+    .message{
+      margin-top: 20px;
+      i{
+        color: #00a0ff;
+        float: left;
+      }
+      p{
+        display: inline-block;
+        width: 210px;
+        margin-left: 15px;
+        padding: 5px 0;
+        font-size: 14px;
+        color: #333333;
+        border-bottom: 1px solid #f6f6f6;
+      }
+    }
+  }
+}

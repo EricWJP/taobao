@@ -1,0 +1,18 @@
+.events-card
+  = link_to coupon.url, target: '_blank' do
+    .event-banner style="background-image:url(#{ coupon.banner? ? coupon.banner.url : coupon.tmp_banner_url })"
+    .events-message
+      .status-block
+        span.label-success.status
+          = coupon.status_text
+      .title
+        = coupon.title
+      .description
+        = (coupon.resume.presence || coupon.detail.presence).try(:truncate, 50)
+      .info
+        span.location
+          i.iconfont.icon-location
+          = coupon.city || '-'
+        span.time
+          i.iconfont.icon-time
+          = coupon.start_date

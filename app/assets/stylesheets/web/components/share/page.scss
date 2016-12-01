@@ -1,0 +1,32 @@
+/* 页码：users */
+.page_list{
+  text-align: center;
+  padding-top:10px;
+  .pagination{
+    margin-bottom: 0;
+  }
+  li{
+    display: inline-block;
+    &.disabled{
+      span, a{
+        color: #bbbdc9;
+        cursor: not-allowed;
+        background-color: #e9edf2;
+        border-color: #ddd;
+      }
+    }
+    span, a{
+      color: #777;
+      margin: 0 4px;
+      border-color: #e9edf2;
+      border-radius: 0 !important;
+    }
+    &.active{
+      span, a{
+        color: #fff;
+        background: #00a0ff;
+        border-color: #0088d8;
+      }
+    }
+  }
+}

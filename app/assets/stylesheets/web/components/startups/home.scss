@@ -1,0 +1,90 @@
+@import 'web/share/meta';
+
+.startups-charts-container{
+  width: 100%;
+  background: #242b3a;
+  padding: 20px 0;
+  .blueline-title{
+    color: #fff;
+  }
+  #trend-chart{
+    height: 456px;
+  }
+}
+
+.startups-playlists{
+  @include block-container;
+  margin-top: 20px;
+}
+
+table.startups-playlists-table{
+  width: 100%;
+  margin-top: 30px;
+  line-height: 2em;
+  thead{
+    background: #fafafa;
+    height: 50px;
+    line-height: 50px;
+    color: #8a8a99;
+    font-size: 14px;
+    th{
+      font-weight: inherit;
+      text-align: center;
+    }
+  }
+  tbody{
+    tr{
+      height: 60px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      border-bottom: 1px solid #f6f6f6;
+      &:hover{
+        background: #fbfcff;
+      }
+      .startup-resume{
+        padding: 15px;
+        width: 20%;
+        line-height: 2em;
+        img.avatar{
+          border: 1px solid #eaedf5;
+          width: 55px;
+          height: 55px;
+          float: left;
+        }
+        .info{
+          margin-left: 60px;
+          text-align: left;
+          font-size: 14px;
+          .name{
+            color: #00a0ff;
+            line-height: 1;
+          }
+          .text-flow{
+            display: inline-block;
+            width: 130px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            a{
+              display: inline-block;
+              width: 130px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+          .industry{
+            color: #c0c0c0;
+            a{
+              display: inline-block;
+              &:hover{
+                color: #00a0ff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

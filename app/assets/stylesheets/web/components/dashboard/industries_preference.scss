@@ -1,0 +1,47 @@
+@import 'web/share/meta';
+
+.dashboard_industries{
+  &.module{
+    margin: 0;
+  }
+  .edit{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #00a0ff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .industries_label{
+    padding: 20px 10px;
+    &#all_list{
+      display: none;
+    }
+    li{
+      width: 106px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 34px;
+      text-align: center;
+      line-height: 34px;
+      margin: 10px;
+      display: inline-block;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      border: 1px solid $high_color;
+      background: #fff;
+      color: $high_color;
+      -webkit-user-select: none;
+      &.active{
+        background: $high_color;
+        color: #fff;
+      }
+    }
+  }
+  #form_preference{
+    margin-left: 20px;
+    display: none;
+  }
+}

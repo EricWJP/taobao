@@ -1,0 +1,75 @@
+#service-sidebar{
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 48px;
+  font-size: 12px;
+  text-align: center;
+  .block{
+    background: #fff;
+    border: 1px solid #eaedf5;
+    margin-bottom: 10px;
+  }
+  a{
+    display: block;
+    width: 100%;
+    color: #666666;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+    border-bottom: 1px solid #f7f7f7;
+    &.gotop, &.godown{
+      padding-top: 18px;
+    }
+    span{
+      display: block;
+      &.icon-up{
+        border-top: 2px solid #686868;
+        border-left: 2px solid #686868;
+        width: 10px;
+        height: 10px;
+        margin: 0 auto;
+        transform: rotate(45deg);
+      }
+      &.icon-down{
+        border-bottom: 2px solid #686868;
+        border-right: 2px solid #686868;
+        width: 10px;
+        height: 10px;
+        margin: 0 auto;
+        transform: rotate(45deg);
+      }
+    }
+    i{
+      font-size: 22px;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+    &:hover{
+      color: #00a0ff;
+      span{
+        border-color: #00a0ff;
+      }
+    }
+  }
+  .images{
+    img{
+      display: none;
+      position: fixed;
+      right: 83px;
+      z-index: 100;
+      border: 0;
+      &.app_qr{
+        bottom: 260px;
+      }
+      &.chuangyepu_qr{
+        bottom: 220px;
+      }
+      &.contact_phone{
+        bottom: 214px;
+      }
+    }
+  }
+}

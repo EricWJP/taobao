@@ -1,0 +1,141 @@
+$highLight: #00a0ff;
+.main_events{
+  margin-top: 10px;
+  position: relative;
+  min-width: 900px;
+  max-width: 1200px;
+  .events-tab{
+    width: 100%;
+    background: #ffffff;
+    color: #374052;
+    font-size: 14px;
+    height: 50px;
+    box-shadow: 3px 3px 10px #eee;
+    margin-bottom: 10px;
+    ul{
+      overflow: hidden;
+      float: left;
+      li{
+        height: 100%;
+        line-height: 50px;
+        width: 150px;
+        float: left;
+        text-align: center;
+        box-sizing: border-box;
+        position: relative;
+      }
+    }
+    .recent-event{
+      float: right;
+      line-height: 50px;
+      margin:0 20px;
+      box-sizing: border-box;
+      &:hover{
+        border-bottom: 3px solid $highLight;
+        color: $highLight;
+      }
+    }
+  }
+  .events-list-show{
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    .events-card{
+      display: block;
+      float: left;
+      margin-right: 2%;
+      margin-bottom: 20px;
+      background: #fff;
+      width: 32%;
+      text-align: center;
+      font-size: 12px;
+      position: relative;
+      border: 1px solid #eee;
+      box-shadow: 3px 3px 10px #eee;
+      &:nth-child(3n){
+        margin-right: 0;
+      }
+      &:hover{
+        border: 1px solid #009afc;
+        box-shadow: 3px 3px 10px #b8e1fd;
+      }
+      .event-banner{
+        height: 250px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+      .events-message{
+        padding: 19px;
+        position: relative;
+        text-align: left;
+        .title{
+          width: 260px;
+          color: #374052;
+          font-size: 16px;
+          font-weight: 500;
+          margin: 0 0 10px 0;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+        .description{
+          height: 34px;
+          color: #888da3;
+          font-size: 12px;
+          margin-bottom: 10px;
+          display: -webkit-box;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        .status{
+          position: absolute;
+          top: 19px;
+          right: 10px;
+          background: #a4aeb3;
+          padding: 1px 3px;
+          text-align: center;
+          color: #ffffff;
+          font-size: 12px;
+          border-radius: 2px;
+          display: block;
+          line-height: 1.5;
+          &.label-success{
+            background: $highLight;
+          }
+        }
+        .info{
+          overflow: hidden;
+          color: #888da3;
+          font-size: 12px;
+          i{
+            color: $highLight;
+            margin-right: 3px;
+          }
+          .location{
+            float: left;
+            display: block;
+            width: 200px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          .time{
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#search_form.events_search_form{
+  margin: 7px;
+  float: right;
+  .input_area{
+    border: 1px solid #ccc;
+  }
+}

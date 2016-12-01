@@ -1,0 +1,104 @@
+/*定制变量*/
+$blue_deep: #00f;
+$high_color: #00a0ff;
+
+body{
+  background: #f6f6f6;
+  min-width: 1200px;
+}
+.container{
+  width: 1170px !important;
+}
+.col-md-9{
+  padding-right: 20px;
+  padding-left: 0;
+  width: 75% !important;
+  float: left;
+}
+.col-md-3{
+  padding: 0;
+  width: 25% !important;
+  float: right;
+}
+i.blue_line{
+  content: " ";
+  display: inline-block;
+  background: #00a0ff;
+  width: 2px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+  margin-right: 8px;
+}
+
+@mixin block-container{
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 3px 3px 10px #eee;
+}
+
+
+/* 创投资讯中作者的信息 */
+@mixin articles-author-info{
+  padding:24px 0 10px 0;
+  position: relative;
+  font-size: 14px;
+  a{
+    display: block;
+  }
+  .author_avatar{
+    float: left;
+    img{
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+  .author_info{
+    margin-left: 44px;
+    .name{
+      color: #495165;
+    }
+    .pitch{
+      color: #bcc4d5;
+    }
+  }
+  .follow-btn-empty{
+    position: absolute;
+    right: 0;
+    top: 30px;
+  }
+}
+
+a.loading-more-right{
+  float: right;
+  cursor: pointer;
+  color: #b4b3b3;
+  font-size: 14px;
+}
+h2.blueline-title{
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #343b42;
+  padding-left: 10px;
+  position: relative;
+  &+time{
+    margin-left: 25px;
+    color: #b9c1cc;
+    font-size: 12px;
+    line-height: 20px;
+    i{
+      margin-right: 5px;
+    }
+  }
+  &::before{
+    content:'|';
+    font-size: 14px;
+    position: absolute;
+    left:0;
+    top:0;
+    display: block;
+    color: $high_color
+  }
+}

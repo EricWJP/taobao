@@ -1,0 +1,33 @@
+.sidemap-wrap{
+  color: #999999;
+  h2{
+    text-align: center;
+  }
+  .hide{
+    display: none;
+  }
+  .tab-container{
+    .tab-list{
+      overflow: hidden;
+      li{
+        font-size: 20px;
+        line-height: 1.5;
+        float: left;
+        padding: 0 20px;
+        cursor: pointer;
+        &.on{
+          background: #fff;
+          color: #00a0ff;
+        }
+      }
+    }
+    .tab-content{
+      background: #fff;
+      padding: 30px;
+      li{
+        list-style: initial;
+        line-height: 30px;
+      }
+    }
+  }
+}

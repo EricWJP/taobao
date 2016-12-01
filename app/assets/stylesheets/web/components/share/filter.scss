@@ -1,0 +1,75 @@
+.institutions_selection{
+  margin-top: 10px;
+}
+.articles_selection{
+  margin-top: 20px;
+}
+.selection_list{
+  padding: 25px 35px 25px 25px;
+  background: #fff;
+  box-shadow: 3px 3px 10px #eee;
+  margin-bottom: 10px;
+  .row{
+    .cell{
+      vertical-align: top;
+      position: relative;
+      &.label{
+        // min-width: 80px;
+      }
+      span{
+        color: #343d42;
+        font-size: 14px;
+        display:inline-block;
+        line-height: 2em;
+      }
+      .industries-tags{
+        overflow: hidden;
+        height: 36px;
+        // *height: auto;
+        // *margin-left: 100px;
+        // *position: relative;
+        // *top: -2em;
+        ul{
+          li{
+            text-align: center;
+            display: inline-block;
+            line-height: 2.5em;
+            min-width: 68px;
+            *float: left;
+            a{
+              color: #888da3;
+              font-size: 13px;
+              text-decoration: none;
+              padding:5px;
+            }
+            a.active,a:hover{
+              color: #fff;
+              background: #00a0ff;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+      .more{
+        position: absolute;
+        right: -18px;
+        top: 7px;
+        line-height: 2em;
+        width: 2em;
+        text-align: right;
+        color: #c5cbda;
+        cursor: pointer;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .row{
+    display: table-row;
+  }
+  .cell{
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+}
