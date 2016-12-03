@@ -134,3 +134,142 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
 
 
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (27.3ms)[0m  [1m[34mSELECT GET_LOCK('7213828539660554070', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (39.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCoupons (20161130083449)
+  [1m[35m (58.4ms)[0m  [1m[35mCREATE TABLE `coupons` (`id` int AUTO_INCREMENT PRIMARY KEY, `taobao_id` int, `name` varchar(255), `cover_file_name` varchar(255), `cover_content_type` varchar(255), `cover_file_size` int, `cover_updated_at` datetime, `detail_url` varchar(255), `type` varchar(255), `taobao_url` varchar(255), `price` float, `monthsales` int, `income_rate` float, `commission` float, `seller_ww` varchar(255), `seller_id` varchar(255), `seller_name` varchar(255), `seller_type` varchar(255), `coupon_id` varchar(255), `coupon_total` varchar(255), `coupon_remainder` varchar(255), `coupon_detail` varchar(255), `coupon_start_date` date, `coupon_end_date` date, `coupon_url` varchar(255), `coupon_spread_url` varchar(255), `position` int, `status` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('7213828539660554070')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7213828539660554070', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (29.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCoupons (20161130083449)
+  [1m[35m (68.9ms)[0m  [1m[35mCREATE TABLE `coupons` (`id` int AUTO_INCREMENT PRIMARY KEY, `taobao_id` int, `name` varchar(255), `cover_file_name` varchar(255), `cover_content_type` varchar(255), `cover_file_size` int, `cover_updated_at` datetime, `detail_url` varchar(255), `type` varchar(255), `taobao_url` varchar(255), `price` float, `monthsales` int, `income_rate` float, `commission` float, `seller_ww` varchar(255), `seller_id` varchar(255), `seller_name` varchar(255), `seller_type` varchar(255), `coupon_id` varchar(255), `coupon_total` varchar(255), `coupon_remainder` varchar(255), `coupon_detail` varchar(255), `coupon_start_date` date, `coupon_end_date` date, `coupon_url` varchar(255), `coupon_spread_url` varchar(255), `position` int, `status` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (36.1ms)[0m  [1m[35mCREATE  INDEX `index_coupons_on_taobao_id`  ON `coupons` (`taobao_id`) [0m
+  [1m[35m (21.5ms)[0m  [1m[35mCREATE  INDEX `index_coupons_on_coupon_id`  ON `coupons` (`coupon_id`) [0m
+  [1m[35m (21.4ms)[0m  [1m[35mCREATE  INDEX `index_coupons_on_seller_id`  ON `coupons` (`seller_id`) [0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161130083449')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7213828539660554070')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `coupo`[0m
+  [1m[35m (1.1ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'coupo'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW CREATE TABLE `coupons`[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'coupons'[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'taobao_development'
+  AND fk.table_name = 'coupo'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'taobao_development'
+  AND fk.table_name = 'coupons'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7213828539660554070', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (18.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCoupons (20161130083450)
+  [1m[35m (71.3ms)[0m  [1m[35mCREATE TABLE `coupons` (`id` int AUTO_INCREMENT PRIMARY KEY, `taobao_id` int, `name` varchar(255), `cover_url` varchar(255), `cover_file_name` varchar(255), `cover_content_type` varchar(255), `cover_file_size` int, `cover_updated_at` datetime, `detail_url` varchar(255), `type` varchar(255), `taobao_url` varchar(255), `price` float, `monthsales` int, `income_rate` float, `commission` float, `seller_ww` varchar(255), `seller_id` varchar(255), `seller_name` varchar(255), `seller_type` varchar(255), `coupon_id` varchar(255), `coupon_total` int, `coupon_remainder` int, `coupon_detail` varchar(255), `coupon_start_date` date, `coupon_end_date` date, `coupon_url` varchar(255), `coupon_spread_url` varchar(255), `position` int, `status` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (35.2ms)[0m  [1m[35mCREATE  INDEX `index_coupons_on_taobao_id`  ON `coupons` (`taobao_id`) [0m
+  [1m[35m (21.4ms)[0m  [1m[35mCREATE  INDEX `index_coupons_on_coupon_id`  ON `coupons` (`coupon_id`) [0m
+  [1m[35m (52.3ms)[0m  [1m[35mCREATE  INDEX `index_coupons_on_seller_id`  ON `coupons` (`seller_id`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161130083450')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7213828539660554070')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSHOW CREATE TABLE `coupo`[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'coupo'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `coupons`[0m
+  [1m[35m (1.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'coupons'[0m
+  [1m[35m (50.8ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'taobao_development'
+  AND fk.table_name = 'coupo'
+[0m
+  [1m[35m (26.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'taobao_development'
+  AND fk.table_name = 'coupons'
+[0m
+Started GET "/" for 127.0.0.1 at 2016-12-03 11:12:13 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (40.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CouponsController#index as HTML
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 72.0ms)
+
+
+  
+NoMethodError (undefined method `results' for Ransack::Search<class: Coupon, base: Grouping <combinator: and>>:Ransack::Search
+Did you mean?  result):
+  
+app/controllers/coupons_controller.rb:3:in `index'
+  Rendering /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (125.4ms)
+Started GET "/" for 127.0.0.1 at 2016-12-03 11:12:55 +0800
+Processing by CouponsController#index as HTML
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `results' for Ransack::Search<class: Coupon, base: Grouping <combinator: and>>:Ransack::Search
+Did you mean?  result):
+  
+app/controllers/coupons_controller.rb:3:in `index'
+  Rendering /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.3ms)
+  Rendering /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendering /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/adolphalex/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (142.3ms)
+Started GET "/" for 127.0.0.1 at 2016-12-03 11:13:03 +0800
+Processing by CouponsController#index as HTML
+  Rendering coupons/index.html.slim within layouts/application
+  Rendered coupons/index.html.slim within layouts/application (55.6ms)
+Completed 200 OK in 21548ms (Views: 21536.7ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-03 11:14:42 +0800
+Processing by CouponsController#index as HTML
+  Rendering coupons/index.html.slim within layouts/application
+  Rendered coupons/index.html.slim within layouts/application (109.7ms)
+Completed 200 OK in 2221ms (Views: 2136.8ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (30.7ms)[0m  [1m[32mINSERT INTO `coupons` (`created_at`, `updated_at`) VALUES ('2016-12-03 03:58:40', '2016-12-03 03:58:40')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `coupons` (`created_at`, `updated_at`) VALUES ('2016-12-03 03:58:45', '2016-12-03 03:58:45')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m

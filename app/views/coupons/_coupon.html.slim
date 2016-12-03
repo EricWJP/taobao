@@ -4,15 +4,18 @@
     .events-message
       .status-block
         span.label-success.status
-          = coupon.status_text
+          = coupon.name
       .title
-        = coupon.title
-      .description
+        = coupon.type
+      /.description
         = (coupon.resume.presence || coupon.detail.presence).try(:truncate, 50)
       .info
         span.location
           i.iconfont.icon-location
-          = coupon.city || '-'
+          = coupon.seller_ww
         span.time
           i.iconfont.icon-time
           = coupon.start_date
+        span.time
+          i.iconfont.icon-time
+          = coupon.end_date
