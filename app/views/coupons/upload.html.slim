@@ -1,0 +1,50 @@
+- if flash[:notice].present?
+  javascript:
+    alert("#{flash[:notice]}");
+
+div class="file-box"
+  = simple_form_for :file, :url => syn_db_coupons_path, html: { method: :post, class: "form-horizontal  form form-bordered", style: "text-align: center; vertical-align:middle" }, validate: true do |f|
+    = f.file_field :myfile, required: true, style: "vertical-align:middle !important"
+    = f.button :submit, :value => "添加"
+
+
+//div class="file-box"
+//  form action="syn_db" method="post" enctype="multipart/form-data"
+//    input type='text' name='textfield' id='textfield' class='txt'
+//    input type='button' class='btn' value='浏览...'
+//      input type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value"
+//    input type="submit" name="submit" class="btn" value="上传"
+css:
+  input {
+    vertical-align: middle;
+    margin: 0;
+    padding: 0
+  }
+
+  .file-box {
+    position: relative;
+    width: 1000px
+  }
+
+  .txt {
+    height: 30px;
+    border: 3px solid #cdcdcd;
+    width: 500px;
+  }
+
+  .btn {
+    background-color: #FFF;
+    border: 3px solid #CDCDCD;
+    height: 30px;
+    width: 70px;
+  }
+
+  .file {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    height: 30px;
+    filter: alpha(opacity:0);
+    opacity: 0;
+    width: 260px
+  }
