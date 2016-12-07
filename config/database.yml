@@ -21,7 +21,6 @@ test:
 production:
   <<: *default
   database: taobao_production
-  password: taobao
 
 
 
