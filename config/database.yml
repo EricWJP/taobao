@@ -15,11 +15,13 @@ test:
   <<: *default
   database: taobao_test
   host: 192.168.99.100
+  password: taobao
 
 
 production:
   <<: *default
   database: taobao_production
+  password: taobao
 
 
 
