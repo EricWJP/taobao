@@ -1,12 +1,12 @@
 .events-card
-  = link_to coupon.url, target: '_blank' do
-    .event-banner style="background-image:url(#{ coupon.banner? ? coupon.banner.url : coupon.tmp_banner_url })"
+  = link_to coupon.coupon_url, target: '_blank' do
+    .event-banner style="background-image:url(#{ coupon.cover_url })"
     .events-message
       .status-block
         span.label-success.status
           = coupon.name
       .title
-        = coupon.type
+        = coupon.category
       /.description
         = (coupon.resume.presence || coupon.detail.presence).try(:truncate, 50)
       .info
@@ -15,7 +15,7 @@
           = coupon.seller_ww
         span.time
           i.iconfont.icon-time
-          = coupon.start_date
+          = coupon.coupon_start_date
         span.time
           i.iconfont.icon-time
-          = coupon.end_date
+          = coupon.coupon_end_date

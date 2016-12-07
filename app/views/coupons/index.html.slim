@@ -1,18 +1,16 @@
-- if @q.present?
-  - date_select = %w(本周 本月 本季度 未来半年 未来一年)
-  .container.main_events
-    = search_form_for @q, remote: true do |f|
-      .events-tab
-       #search_form.search_form.events_search_form
-          .input_area
-            i.icon-search.iconfont
-            = f.text_field :name_cont, placeholder: '请输入商品关键词查询...',  :id => "name_cont"
-          .button_area
-            = submit_tag "搜索"
-          .clear
-    br
-    #events_index
-      = render 'coupons/coupons', coupons: @coupons
+.container.main_events
+  = search_form_for @q, remote: true do |f|
+    .events-tab
+     #search_form.search_form.events_search_form
+        .input_area
+          i.icon-search.iconfont
+          = f.text_field :name_cont, placeholder: '请输入商品关键词查询...',  :id => "name_cont"
+        .button_area
+          = submit_tag "搜索"
+        .clear
+  br
+  #events_index
+    = render 'coupons/coupons', coupons: @coupons
 
 
 
@@ -26,7 +24,4 @@
       //$('#title_or_detail_cont').val("");
       $('#event_search').submit();
 
-
-      //$('#event_search').val(value)
-      //$('#title_or_detail_cont').text(value)
     });

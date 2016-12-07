@@ -109,6 +109,14 @@ gem 'faraday'
 #Excel
 gem 'spreadsheet'
 
+group :test, :development, :docker do
+  gem 'pry'
+  gem 'pry-rails'
+  # gem 'sunspot_solr'
+  gem 'pry-byebug'
+  # gem 'seed-fu', '~> 2.3'
+  # gem 'rack-livereload'
+end
 ### Databases ###
 gem 'mysql2', '>= 0.3.13', '< 0.5'
 gem 'redis'
