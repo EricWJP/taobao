@@ -77,9 +77,9 @@ gem 'slack-notifier'
 
 
 ### Useful plugins with common methods ###
-gem 'acts-as-taggable-on'
-gem 'acts_as_commentable', '>= 4.0.0'
-gem "acts_as_follower"
+# gem 'acts-as-taggable-on'
+# gem 'acts_as_commentable', '>= 4.0.0'
+# gem "acts_as_follower"
 # gem 'daemons' #, "= 1.0.10"
 # gem 'awesome_print'
 # gem 'easy_captcha'
