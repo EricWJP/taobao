@@ -23,13 +23,14 @@ class CouponsController < ApplicationController
       head_column[k] = v
     end
     sheet.each do |row|
-      next  if row[0] == "商品id"
-      coupon = {}
-      params_array.each_with_index do |key, i|
-        coupon[key] = row[i]
+      if row[0] != "商品id"
+        coupon = {}
+        params_array.each_with_index do |key, i|
+          coupon[key] = row[i]
+        end
+        # first_name = row[head_column["First Name"]] #First Name in excel header
+        Coupon.create(coupon)
       end
-      # first_name = row[head_column["First Name"]] #First Name in excel header
-      Coupon.create(coupon)
     end
     redirect_to upload_coupons_path, notice: "上传成功！"
   end
