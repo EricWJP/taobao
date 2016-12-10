@@ -22,8 +22,9 @@ class CouponsController < ApplicationController
     row1.each_with_index do |k,v|
       head_column[k] = v
     end
+    i = 1
     sheet.each do |row|
-      if row[0] != "商品id"
+      if i != 1
         coupon = {}
         params_array.each_with_index do |key, i|
           coupon[key] = row[i]
@@ -31,6 +32,7 @@ class CouponsController < ApplicationController
         # first_name = row[head_column["First Name"]] #First Name in excel header
         Coupon.create(coupon)
       end
+      i = i + 1
     end
     redirect_to upload_coupons_path, notice: "上传成功！"
   end
