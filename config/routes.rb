@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'coupons#index'
-  resources :coupons do
+  resource :coupons do
     member do
       get :upload
       post :syn_db
