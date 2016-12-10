@@ -12,7 +12,6 @@ class CouponsController < ApplicationController
 
 
   def syn_db
-    binding.pry
     file_path = params[:file][:myfile].path
     # file_path = '/Users/adolphalex/Desktop/精选.xls'
     Spreadsheet.client_encoding = 'UTF-8'
